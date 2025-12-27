@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Image from './assets/download.png'
 const App = () => {
   const [input,Setinput] = useState('')
   const [number,Setnumber] = useState('')
@@ -63,9 +63,9 @@ max-sm:w-[90vw] flex flex-col items-center p-3 gap-3 overflow-y-auto '>
     <div
       key={index}
       className='min-h-[17%] w-[90%] bg-gray-500 rounded-2xl flex justify-between p-1.5 px-3 items-center  max-sm:gap-2 max-sm:w-[86vw]'>
-         <img className=' object-cover h-16 w-16 rounded-full' src={item.profile || './assets/download.png'} alt="image" onError={(e) => {
+         <img className=' object-cover h-16 w-16 rounded-full' src={item.profile || Image} alt="image" onError={(e) => {
     e.target.onerror = null
-    e.target.src = './assets/download.png'
+    e.target.src = Image
   }} />
          <div className=' flex flex-col '>
           <h1 className=' text-white font-bold'>{item.input}</h1>
